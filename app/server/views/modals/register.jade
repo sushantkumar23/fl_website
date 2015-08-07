@@ -1,0 +1,23 @@
+#account-form-container.modal.hide.fade
+	form(method="post")#account-form.form-horizontal.well
+	h1 Signup
+	p.subheading Please tell us a little about yourself.
+	hr
+	fieldset
+		#name-cg.control-group
+			label.control-label(for='name-tf') Name
+			.controls
+				input#name-tf(type='text', name='name', value= user.name)
+		#email-cg.control-group
+			label.control-label(for=email-tf) E-mail
+			.controls
+				input#email-tf(type='email' name='email' value=user.email)
+		#mobile-cg.control-group
+			label.control-label(for=mobile-tf) Mobile
+			.controls
+				input#mobile-tf(type="tel" name='mobile')
+		hr
+		.form-buttons
+			button(type='button')#account-form-btn1.btn(value='Cancel')
+			button(type='submit')#account-form-btn2.btn.btn-primary(value='Submit')
+

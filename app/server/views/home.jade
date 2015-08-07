@@ -33,7 +33,7 @@ block content
               br
               .hiw_btn_section
                 a(href='#how_it_works')
-                  button.btn.btn-lg.hiw_btn How it works
+                  button#signup_click.btn.btn-lg.signup_btn How it works
         a(name='register')
         .register_container
           .container.container_fluid
@@ -79,3 +79,13 @@ block content
                 input.sug_form_textinput.form-control(type='text', placeholder='PRODUCT')
                 input.sug_form_textinput.form-control(type='email', placeholder='E-MAIL')
                 button.form-control.btn-lg.sug_submit_btn(type='submit') SUBMIT
+
+include modals/register
+
+block scripts
+  script(src='/vendor/bootstrap-modal.js')
+  script(src='/vendor/boostratp-transition.js')
+  script(src='/vendor/jquery.form.js')
+  script(src='/js/views/signup.js')
+  script(src='/js/controllers/signupController.js')
+  script(src='/js/form-validators/accountValidator.js')

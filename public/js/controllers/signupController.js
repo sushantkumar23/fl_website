@@ -8,6 +8,6 @@ function SignupController()
 	$('.modal-alert #ok').click(function(){ setTimeout(function(){window.location.href = '/';}, 300)});
 
 	$('#signup_btn').click(function(){ 
-		$('#account-form-container').modal('show');
+		$('#account-form-container').removeClass('.hide').addClass('.show');
 	});
 }

@@ -1,6 +1,7 @@
 var http = require('http');
 var express = require('express');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 var errorHandler = require('errorhandler');
 var cookieParser = require('cookie-parser');
 var MongoStore = require('connect-mongo')(session);
@@ -10,7 +11,7 @@ var app = express();
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/app/server/views');
-app.set('view-engine', 'jade');
+app.set('view engine', 'jade');
 
 
 app.use(bodyParser.json());

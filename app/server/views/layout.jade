@@ -1,0 +1,213 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Subscription based daily delivery - First Light
+    // Style Sheets
+    link(type='text/css', rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+    link(type='text/css', rel='stylesheet', href='https://raw.githubusercontent.com/lipis/bootstrap-social/gh-pages/bootstrap-social.css')
+    // JS Files
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+    script.
+      $(function() {
+      var theWindow        = $("#js_hero"),
+      $bg              = $("#bg"),
+      aspectRatio      = $bg.width() / $bg.height(),
+      min_height		 = 600;
+      function resizeBg() {
+      if ( (theWindow.width() / theWindow.height()) < aspectRatio ) {
+      $bg
+      .removeClass()
+      .addClass('bgheight');
+      } else {
+      $bg
+      .removeClass()
+      .addClass('bgwidth');
+      }
+      }
+      theWindow.resize(function() {
+      resizeBg();
+      }).trigger("resize");
+      });
+    // Font Files
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic', rel='stylesheet', type='text/css')
+    style(type='text/css').
+      body{
+      margin:0;
+      font-family: Roboto;
+      }
+      .logo{
+      font-family: Roboto;
+      font-weight: 700;
+      color: #1670CA;
+      font-size: 25px;
+      padding-top: 10px;
+      padding-left: 30px;
+      }
+      /* Navbar Styling */
+      .firstlight-header{
+      padding: 0px 25px 0px 25px;
+      padding-right: 50px;
+      background: rgba(255,255,255,0.8);
+      }
+      .hero{
+      position: relative;
+      min-height:600px;
+      }
+      .hero_background{
+      position: absolute;
+      right:0;
+      top:0;
+      bottom:0;
+      left:0;
+      overflow: hidden;
+      min-height:600px;
+      width: 100%;
+      }
+      .hero_content{
+      top:50px;
+      height: 550px;
+      position: relative;
+      display:table;
+      z-index:2;
+      }
+      .hero_subtitle{
+      font-size: 25px;
+      color: white;
+      line-height: 1em;
+      font-weight: 200;
+      }
+      /* How it works - section */
+      .hiw_container{
+      min-height: 600px;
+      background-color: #2996F3;
+      padding-top: 40px;
+      }
+      .hiw_title{
+      font-size: 50px;
+      color: white;
+      font-weight: 100;
+      }
+      .hiw_subtitle{
+      color: white;
+      font-size: 20px;
+      font-weight: 100;
+      }
+      .hiw_body{
+      padding-top: 80px;
+      }
+      .hiw_step_container{
+      min-height:200px;
+      }
+      .hiw_step_img{
+      max-width:100px;
+      }
+      .hiw_step_title{
+      color: white;
+      font-size: 30px;
+      padding-top: 10px;
+      font-weight: 100;
+      }
+      .hiw_step_text{
+      color: white;
+      font-size: 15px;
+      margin: 0px 15px 0px 15px;
+      font-weight: 200;
+      }
+      /* Register */
+      .register_container, .sug_container{
+      min-height: 600px;
+      background-color: white;
+      padding-top: 40px;
+      }
+      .register_title, .sug_title{
+      font-size: 50px;
+      color: #2996F3;
+      font-weight: 100;
+      }
+      .register_subtitle, .sug_subtitle{
+      color: #2996F3;
+      font-size: 20px;
+      font-weight: 100;
+      }
+      .register_body, .sug_body{
+      padding-top: 25px;
+      }
+      .register_body_form, .sug_body_form{
+      position: relative;
+      float: left;
+      z-index: 2;
+      }
+      .input-group{
+      border-radius:2px;
+      }
+      .register_form_textinput, .sug_form_textinput{
+      margin: 15px 0 15px 0;
+      padding: 5px 10px 5px 10px;
+      height: 40px;
+      font-size: 14px;
+      border-radius: 2px;
+      }
+      .register_submit_btn, .sug_submit_btn{
+      margin-top: 30px;
+      height: 50px;
+      border-radius: 2px;
+      background-color: #2996f3;
+      color: white;
+      font-weight: 200;
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+      }
+      .text_branding{
+      font-weight:700;
+      color:white;
+      font-size:60px;
+      text-shadow: 0px 2px 2px #A5A5A5;
+      }
+      .va_middle{
+      vertical-align: middle;
+      }
+      .va_middle, .va_top, .va_bottom{
+      display: table-cell;
+      }
+      .va_bottom{
+      vertical-align: bottom;
+      }
+      #bg {
+      top: 0;
+      left: 0;
+      }
+      .bgwidth{
+      width: 100%;
+      min-height: 600px;
+      min-width:1200px;
+      }
+      .bgheight{
+      height: 100%;
+      min-height: 600px;
+      min-width: 1200px;
+      }
+      .nav li a{
+      font size: 15px;
+      color: rgba(0,0,0,0.7);
+      font-weight: 400;
+      }
+      .hiw_btn_section{
+      padding-top: 20px;
+      }
+      .hiw_btn{
+      background: rgba(0,0,0,0.5);
+      border-radius: 4px;
+      padding: 10px 20px 10px 20px;
+      color: whitesmoke;
+      }
+      .hiw_btn:hover{
+      background: rgba(0,0,0,0.7);
+      border-radius: 4px;
+      padding: 10px 20px 10px 20px;
+      color: whitesmoke;
+      }
+  block content
+  block scripts

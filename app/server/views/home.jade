@@ -1,0 +1,81 @@
+extends layout
+
+block content  
+  body
+      nav.navbar.navbar-fixed-top.firstlight-header
+        // Brand and Toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          .logo
+            a.navbar_brand.logo(href='http://www.google.com') firstlight
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li.active
+              a(href='#') Home
+            li
+              a(href='#register') Register
+            li
+              a(href='#suggestions') Suggestions
+            li
+              a(href='#') Contact Us
+      main#site-content(role='main')
+        .hero
+          #js_hero.hero_background
+            img#bg(src='img/hero_img.png')
+          .hero_content.container.container-fluid
+            .text-center.va_middle
+              h1.text_branding MORNING PERFECTION
+              small.hero_subtitle Subscription based Delivery for a perfect start. Everyday!
+              br
+              .hiw_btn_section
+                a(href='#how_it_works')
+                  button.btn.btn-lg.hiw_btn How it works
+        a(name='register')
+        .register_container
+          .container.container_fluid
+            .row.hiw_header.col-xs-12.text-center
+              h1.register_title Register
+              small.register_subtitle Drop your e-mail here and we will get back to as soon as we are up and running.
+            .register_body.row.col-xs-12.text-center
+              .register_body_form.col-xs-8.col-xs-offset-2.col-md-4.col-md-offset-4
+                form(action='http://52.27.139.213/register.php', method='POST')
+                  input.register_form_textinput.form-control(type='text', name='name', placeholder='NAME')
+                  input.register_form_textinput.form-control(type='email', name='email', placeholder='E-MAIL')
+                  input.register_form_textinput.form-control(type='tel', name='mobile', placeholder='MOBILE NUMBER')
+                  input.register_form_textinput.form-control(type='password', name='password', placeholder='PASSWORD')
+                  input.form-control.btn-lg.register_submit_btn(type='submit', value='SUBMIT')
+        a(name='how_it_works')
+        .hiw_container
+          .container.container_fluid
+            .row.hiw_header.col-xs-12.text-center
+              h1.hiw_title How it works?
+              small.hiw_subtitle Let's walk you through the process - it's as simple as it could ever get!
+            .hiw_body.row.col-xs-12
+              .hiw_step_container.col-xs-10.col-xs-offset-1.col-md-4.col-md-offset-0.text-center
+                img.hiw_step_img(src='img/hiw_step1.png')
+                h1.hiw_step_title Search
+                small.hiw_step_text Handpick your favourite items into your cart from our app.
+              .hiw_step_container.col-xs-10.col-xs-offset-1.col-md-4.col-md-offset-0.text-center
+                img.hiw_step_img(src='img/hiw_step2.png')
+                h1.hiw_step_title Subscribe
+                small.hiw_step_text Choose your subscription - daily, weekly, monthly - as per your needs.
+              .hiw_step_container.col-xs-10.col-xs-offset-1.col-md-4.col-md-offset-0.text-center
+                img.hiw_step_img(src='img/hiw_step3.png')
+                h1.hiw_step_title Savour
+                small.hiw_step_text Recieve your order early morning and have the perfect start
+        a(name='suggestions')
+        .sug_container
+          .container.container_fluid
+            .row.sug_header.col-xs-12.text-center
+              h1.sug_title Suggestions
+              small.sug_subtitle
+                | Help us serve your better. Let us know the products that you would need on daily subscription.
+            .sug_body.row.col-xs-12.text-center
+              .sug_body_form.col-xs-8.col-xs-offset-2.col-md-4.col-md-offset-4
+                input.sug_form_textinput.form-control(type='text', placeholder='PRODUCT')
+                input.sug_form_textinput.form-control(type='email', placeholder='E-MAIL')
+                button.form-control.btn-lg.sug_submit_btn(type='submit') SUBMIT

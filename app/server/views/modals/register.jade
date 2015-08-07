@@ -1,22 +1,25 @@
-#account-form-container.modal.hide.fade
-	form(method="post")#account-form.form-horizontal.well
-	h1 Signup
-	p.subheading Please tell us a little about yourself.
-	hr
-	fieldset
-		#name-cg.control-group
-			label.control-label(for='name-tf') Name
-			.controls
-				input#name-tf(type='text', name='name', value=)
-		#email-cg.control-group
-			label.control-label(for='email-tf') E-mail
-			.controls
-				input#email-tf(type='email', name='email', value=)
-		#mobile-cg.control-group
-			label.control-label(for='mobile-tf') Mobile
-			.controls
-				input#mobile-tf(type="tel", name='mobile', value=)
-		hr
-		.form-buttons
-			button(type='button' value='Cancel')#account-form-btn1.btn
-			button(type='submit' value='Submit')#account-form-btn2.btn.btn-primary
+#account-form-container#.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') &times
+                .modal-title Signup
+            .modal-body
+                form(method="post")#account-form.form-horizontal
+                    fieldset
+                        #name-cg.control-group
+                            label.control-label(for='name-tf') Name
+                            .controls
+                                input#name-tf(type='text', name='name', value=)
+                        #email-cg.control-group
+                            label.control-label(for='email-tf') E-mail
+                            .controls
+                                input#email-tf(type='email', name='email', value=)
+                        #mobile-cg.control-group
+                            label.control-label(for='mobile-tf') Mobile
+                            .controls
+                                input#mobile-tf(type="tel", name='mobile', value=)
+            .modal-footer
+                button(type='button' value='Cancel')#account-form-btn1.btn.btn-default Cancel
+                button(type='submit' value='Submit')#account-form-btn2.btn.btn-primary Submit

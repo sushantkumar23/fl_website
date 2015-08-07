@@ -1,0 +1,23 @@
+#account-form-container.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') &times
+                .modal-title 
+                    h1 Signup
+            .modal-body
+                form(method="post")#account-form
+                    .form-group
+                        #name-cg.control-group
+                            label(for='name-tf') Name
+                            input#name-tf.form-control(type='text' name='name' value=)
+                        #email-cg.control-group
+                            label(for='email-tf') E-mail
+                            input#email-tf.form-control(type='email' name='email' value=)
+                        #mobile-cg.control-group
+                            label(for='mobile-tf') Mobile
+                            input#mobile-tf.form-control(type="tel" name='mobile' value=)
+            .modal-footer
+                button(type='button' value='Cancel')#account-form-btn1.btn.btn-default Cancel
+                button(type='submit' value='Submit')#account-form-btn2.btn.btn-primary Submit

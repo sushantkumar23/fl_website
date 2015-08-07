@@ -7,17 +7,16 @@
 		#name-cg.control-group
 			label.control-label(for='name-tf') Name
 			.controls
-				input#name-tf(type='text', name='name', value= user.name)
+				input#name-tf(type='text', name='name', value=)
 		#email-cg.control-group
 			label.control-label(for='email-tf') E-mail
 			.controls
-				input#email-tf(type='email' name='email' value=user.email)
+				input#email-tf(type='email', name='email', value=)
 		#mobile-cg.control-group
 			label.control-label(for='mobile-tf') Mobile
 			.controls
-				input#mobile-tf(type="tel" name='mobile' value=user.mobile)
+				input#mobile-tf(type="tel", name='mobile', value=)
 		hr
 		.form-buttons
 			button(type='button')#account-form-btn1.btn(value='Cancel')
 			button(type='submit')#account-form-btn2.btn.btn-primary(value='Submit')
-

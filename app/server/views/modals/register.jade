@@ -4,7 +4,8 @@
             .modal-header
                 button.close(type='button' data-dismiss='modal' aria-label='Close')
                     span(aria-hidden='true') &times
-                .modal-title Signup
+                .modal-title 
+                    h1 Signup
             .modal-body
                 form(method="post")#account-form
                     .form-group
@@ -13,10 +14,10 @@
                             input#name-tf.form-control(type='text' name='name' value=)
                         #email-cg.control-group
                             label(for='email-tf') E-mail
-                            input#email-tf(type='email' name='email' value=)
+                            input#email-tf.form-control(type='email' name='email' value=)
                         #mobile-cg.control-group
                             label(for='mobile-tf') Mobile
-                            input#mobile-tf(type="tel" name='mobile' value=)
+                            input#mobile-tf.form-control(type="tel" name='mobile' value=)
             .modal-footer
                 button(type='button' value='Cancel')#account-form-btn1.btn.btn-default Cancel
                 button(type='submit' value='Submit')#account-form-btn2.btn.btn-primary Submit
